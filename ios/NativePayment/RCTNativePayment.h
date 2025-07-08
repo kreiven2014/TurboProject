@@ -1,16 +1,10 @@
-//
-//  RCTNativePayment.h
-//  TurboProject
-//
-//  Created by Mikle Maschenko on 08.07.2025.
-//
 
 #import <Foundation/Foundation.h>
+#import "NativePayment/NativePayment.h" // from TurboModule codegen
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RCTNativePayment : NSObject
-
+@interface NativePayment : NSObject <NativePaymentSpec>
 @end
 
 NS_ASSUME_NONNULL_END

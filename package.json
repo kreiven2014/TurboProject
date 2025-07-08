@@ -9,6 +9,20 @@
     "start": "react-native start",
     "test": "jest"
   },
+  "codegenConfig": {
+    "name": "NativePayment",
+    "type": "modules",
+    "jsSrcsDir": "specs",
+    "android": {
+      "javaPackageName": "com.native.payment"
+    },
+    "ios": {
+     "libraryName": "NativePaymentSpec",
+     "modulesProvider": {
+       "NativePayment": "NativePayment"
+     }
+   }
+  },
   "dependencies": {
     "react": "19.1.0",
     "react-native": "0.80.1",
