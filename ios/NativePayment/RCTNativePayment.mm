@@ -1,5 +1,5 @@
 #import "RCTNativePayment.h"
-#import "TurboProject-Swift.h" // assuming this includes AdyenTapToPayImplementation
+#import "TurboProject-Swift.h" // assuming this includes NativePaymentImplementation
 
 @implementation NativePayment {
   NativePaymentImplementation *implementation;
@@ -21,7 +21,7 @@ RCT_EXPORT_MODULE()
 
 #pragma mark - TurboModule Spec Methods
 
-- (void)initialize:(JS::NativePayment::AdyenConfig &)config
+- (void)initialize:(JS::NativePayment::NativePaymentConfig &)config
            resolve:(RCTPromiseResolveBlock)resolve
             reject:(RCTPromiseRejectBlock)reject {
   @try {

@@ -3,7 +3,7 @@ import type { TurboModule } from 'react-native';
 import { TurboModuleRegistry } from 'react-native';
 import type { EventEmitter } from 'react-native/Libraries/Types/CodegenTypes';
 
-export type AdyenConfig = {
+export type NativePaymentConfig = {
   authToken: string;
   apiUrl: string;
   storeId: string;
@@ -64,7 +64,7 @@ export type PaymentStatusEvent = {
 
 // ✅ This is the crucial part:
 export interface Spec extends TurboModule {
-  initialize(config: AdyenConfig): Promise<InitializeResponse>;
+  initialize(config: NativePaymentConfig): Promise<InitializeResponse>;
   startPayment(request: PaymentRequest): Promise<PaymentResponse>;
   cancelPayment(): Promise<CancelResponse>;
   isDeviceSupported(): Promise<DeviceSupportResponse>;
